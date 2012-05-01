@@ -1,5 +1,6 @@
 require 'net/http'
 require 'json'
+require_relative 'mock_class_info'
 
 class MockScheduleScraper
   def get_class_info(term_code, class_number)
