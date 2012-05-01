@@ -12,7 +12,7 @@ class MockScheduleScraper
 
   def get_class_status(term_code, class_number)
     course_info = fetch(term_code, class_number)
-    if course_info == "Open"
+    if course_info['status'] == "Open"
       :open
     else
       :closed
