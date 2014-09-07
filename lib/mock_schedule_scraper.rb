@@ -4,25 +4,27 @@ require_relative 'mock_class_info'
 
 class MockScheduleScraper
   def get_class_info(term_code, class_number)
-    course_info = fetch(term_code, class_number)
+    # course_info = fetch(term_code, class_number)
 
-    if course_info.nil?
-      nil
-    else
-      MockClassInfo.new(course_info['name'], course_info['schedule'])
-    end
+    # if course_info.nil?
+    #   nil
+    # else
+    #   MockClassInfo.new(course_info['name'], course_info['schedule'])
+    # end
+    MockClassInfo.new('Fake Course', 'MWF')
   end
 
 
   def get_class_status(term_code, class_number)
-    course_info = fetch(term_code, class_number)
-    if course_info.nil?
-      nil
-    elsif course_info['status'] == "Open"
-      :open
-    else
-      :closed
-    end
+    # course_info = fetch(term_code, class_number)
+    # if course_info.nil?
+    #   nil
+    # elsif course_info['status'] == "Open"
+    #   :open
+    # else
+    #   :closed
+    # end
+    :closed
   end
 
   private
